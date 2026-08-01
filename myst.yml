@@ -3,7 +3,11 @@ project:
   title: "Web Courses Vault"
   author: "Raul"
   abstract: "My personal course notes and vault."
-  jupyter: true
+  github: "raulcontreraso-bit/Web_Courses_Vault"  # Add your GitHub repo here
+  jupyter:
+    binder:
+      repo: "raulcontreraso-bit/Web_Courses_Vault"  # Points Binder to your repo automatically
+      ref: "main"                                  # Your default branch name (main or master)
   toc:
     - file: index.md
     - file: 01_python/00_vanilla/For_loop.ipynb
@@ -12,6 +16,6 @@ site:
   template: book-theme
   options:
     baseurl: "/Web_Courses_Vault/"
-    logo: ""          # Optional: add a logo path if you have one
+    logo: ""
     parts:
       navbar_title: "Web Courses Vault"
