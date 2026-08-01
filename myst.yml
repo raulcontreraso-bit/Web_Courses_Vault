@@ -11,5 +11,9 @@ site:
   template: book-theme
   options:
     baseurl: "/Web_Courses_Vault/"
+    logo: ""          # Optional: add a logo path if you have one
   parts:
-    primary_sidebar_footer: sidebar-footer.md
+    navbar_title: "Web Courses Vault"
+
+
+    
