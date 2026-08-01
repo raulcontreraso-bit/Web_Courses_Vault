@@ -3,5 +3,9 @@ root: index
 
 sections:
   - file: 01_python/index
+    sections:
+      - file: 01_python/00_vanilla/index
+      - file: 01_python/01_pandas/index
+      - file: 01_python/02_numpy/index
   - file: 02_frontend/index
   - file: 03_backend/index
