@@ -25,11 +25,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mystmd
+          pip install jupyter-book
 
-      - name: Build MyST site
+      - name: Build Jupyter Book
         run: |
-          myst build --html
+          jupyter-book build --html
+        env:
+          BASE_URL: "/Web_Courses_Vault/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
