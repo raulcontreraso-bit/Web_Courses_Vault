@@ -1,11 +1,12 @@
 title: Web Courses Vault
 author: Raul Contreras
-description: Fast-review interactive notes and course references.
 logo: ""
+
+html:
+  baseurl: "/Web_Courses_Vault/"
+  repository_url: "https://github.com/raulcontreraso-bit/Web_Courses_Vault"
+  use_edit_page_button: true
+  use_source_button: true
 
 execute:
   execute_notebooks: "off"
-
-html:
-  use_issues_button: false
-  use_repository_button: true
