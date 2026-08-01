@@ -20,3 +20,7 @@ site:
     baseurl: "/Web_Courses_Vault/"
     logo: ""
     navbar_title: "Web Courses Vault"
+    # Adds a professional blue accent color to your site highlights/links
+    color: "#2563eb" 
+  parts:
+    primary_sidebar_footer: footer.md
