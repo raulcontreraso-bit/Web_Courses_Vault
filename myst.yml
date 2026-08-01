@@ -4,7 +4,7 @@ project:
   author: "Raul"
   abstract: "My personal course notes and vault."
   toc:
-    - file: 01_python/index.md
+    - file: index.md
     - file: 01_python/00_vanilla/For_loop.ipynb
     - file: 01_python/01_pandas/dataframe.ipynb
 site:
