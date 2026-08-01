@@ -1,1 +1,1 @@
-{"version":"1","myst":"1.10.1","references":[{"kind":"page","data":"/content/index.json","url":"/"},{"kind":"page","data":"/content/first-note.json","url":"/first-note"}]}
+{"version":"1","myst":"1.10.1","references":[{"kind":"page","data":"/content/index.json","url":"/"},{"kind":"page","data":"/content/for-loop.json","url":"/for-loop"},{"kind":"page","data":"/content/dataframe.json","url":"/dataframe"},{"identifier":"pandas-dataframe-introduction","kind":"heading","data":"/content/dataframe.json","url":"/dataframe","implicit":true}]}
