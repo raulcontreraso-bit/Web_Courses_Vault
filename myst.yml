@@ -6,20 +6,9 @@ project:
     - name: Raul Contreras
   toc:
     - file: README.md
-
-    - title: 🐍 Python Ecosystem
-      children:
-        - file: 01_python/index.md
-        - file: 01_python/00_vanilla/01_basics.md
-        - file: 01_python/01_pandas/index.md
-
-    - title: 🌐 Front-End Development
-      children:
-        - file: 02_frontend/index.md
-
-    - title: ⚙️ Back-End Development
-      children:
-        - file: 03_backend/index.md
+    - file: 01_python/index.md
+    - file: 02_frontend/index.md
+    - file: 03_backend/index.md
 
 site:
-  template: book-theme    
+  template: book-theme
