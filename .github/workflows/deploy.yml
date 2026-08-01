@@ -1,45 +1,22 @@
-name: deploy-book
-
-on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install mystmd
-
-      - name: Build MyST site
-        run: |
-          myst build --html
-        env:
-          BASE_URL: "/Web_Courses_Vault/"
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '_build/html'
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+version: 1
+project:
+  title: "Web Courses Vault"
+  author: "Raul"
+  abstract: "My personal course notes and vault."
+  github: "raulcontreraso-bit/Web_Courses_Vault"
+  jupyter:
+    binder:
+      repo: "raulcontreraso-bit/Web_Courses_Vault"
+      ref: "main"
+      binder_url: "https://mybinder.org"
+  toc:
+    - file: index.md
+    - file: 01_python/00_vanilla/For_loop.ipynb
+    - file: 01_python/01_pandas/dataframe.ipynb
+site:
+  template: book-theme
+  options:
+    baseurl: "/Web_Courses_Vault/"
+    logo: ""
+    parts:
+      navbar_title: "Web Courses Vault"
