@@ -22,4 +22,4 @@ project:
         - file: 03_backend/index.md
 
 site:
-  template: book-theme
+  template: book-theme    
