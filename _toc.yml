@@ -1,5 +1,5 @@
 format: jb-article
-root: README
+root: index
 
 sections:
   - file: 01_python/index
