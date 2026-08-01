@@ -1,0 +1,8 @@
+version: 1
+project:
+  title: "Web Courses Vault"
+  author: "Raul"
+  abstract: "My personal course notes and vault."
+  toc: _toc.yml
+site:
+  template: book-theme
