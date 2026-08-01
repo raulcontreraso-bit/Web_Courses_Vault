@@ -29,7 +29,9 @@ jobs:
 
       - name: Build Jupyter Book
         run: |
-          jupyter-book build .
+          jupyter-book build --html
+        env:
+          BASE_URL: "/Web_Courses_Vault/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -40,5 +42,4 @@ jobs:
           path: '_build/html'
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4  
-        
+        uses: actions/deploy-pages@v4
