@@ -26,7 +26,7 @@ jobs:
         run: npm install -g mystmd
 
       - name: Build site
-        run: myst build --html --baseurl /Web_Courses_Vault/
+        run: myst build --html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
