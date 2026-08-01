@@ -3,7 +3,11 @@ project:
   title: "Web Courses Vault"
   author: "Raul"
   abstract: "My personal course notes and vault."
-  toc: _toc.yml
+  toc:
+    - file: 01_python/index
+      children:
+        - file: 01_python/00_vanilla/for_loop
+        - file: 01_python/01_pandas/dataframe_intro
 site:
   template: book-theme
   baseurl: "/Web_Courses_Vault/"
