@@ -6,3 +6,4 @@ project:
   toc: _toc.yml
 site:
   template: book-theme
+  baseurl: "/Web_Courses_Vault/"
