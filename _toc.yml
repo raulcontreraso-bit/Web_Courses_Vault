@@ -1,4 +1,4 @@
 format: jb-book
 root: my_notes/index
 chapters:
-  - file: my_notes/first_note
+  - file: my_notes/first_note    
