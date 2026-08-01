@@ -1,22 +1,38 @@
-version: 1
-project:
-  title: "Web Courses Vault"
-  author: "Raul"
-  abstract: "My personal course notes and vault."
-  github: "raulcontreraso-bit/Web_Courses_Vault"
-  jupyter:
-    binder:
-      repo: "raulcontreraso-bit/Web_Courses_Vault"
-      ref: "main"
-    kernels:
-      - python3
-  toc:
-    - file: index.md
-    - file: 01_python/00_vanilla/For_loop.ipynb
-    - file: 01_python/01_pandas/dataframe.ipynb
-site:
-  template: book-theme
-  options:
-    baseurl: "/Web_Courses_Vault/"
-    logo: ""
-    navbar_title: "Web Courses Vault" 
+name: Deploy MyST Site
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install MyST CLI
+        run: npm install -g mystmd
+
+      - name: Build site
+        run: myst build --html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _build/html
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
