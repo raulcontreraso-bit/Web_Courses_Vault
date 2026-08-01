@@ -19,4 +19,5 @@ site:
   options:
     baseurl: "/Web_Courses_Vault/"
     logo: ""
-    navbar_title: "Web Courses Vault"
+    navbar_title: "Web Courses Vault"   
+    
