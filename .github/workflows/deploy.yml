@@ -29,7 +29,9 @@ jobs:
 
       - name: Build MyST site
         run: |
-          myst build --html --baseurl "/Web_Courses_Vault/"
+          myst build --html
+        env:
+          BASE_URL: "/Web_Courses_Vault/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
